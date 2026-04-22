@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A read on Hamperapp's operator layer: where the playbook lives, and where it breaks</title>
+<meta name="description" content="Saw Hamperapp landed the Morgan Stanley ISV cohort last quarter and the LinkedIn feed has pivoted hard to hotels and short-term rentals. I have a bet on which piece of the operator handoff is eating your support team's week.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="https://hamperapp.com" target="_blank" rel="noopener" aria-label="Hamperapp">
+      <span class="brand-mark" aria-hidden="true">
+        <img src="logo-symbol.svg" alt="">
+      </span>
+      <span class="brand-word">Hamperapp</span>
+    </a>
+    <span class="topbar-meta">Prepared for the founders. April 2026.</span>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span> A note from outside the building</span>
+      <h1>A read on Hamperapp's operator layer: where the playbook lives, and where it breaks.</h1>
+      <p class="lede">You run a marketplace of 60+ independent laundromats across 12 states, and the Morgan Stanley ISV cohort just put a real spotlight on the hospitality pivot. The homepage says laundry is your problem. The honest version is that partner variance is the thing that decides whether the next hotel contract renews.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">Grab 30 minutes with Matt</a>
+        <span class="hero-cta-note">Booth SS87. Bring one operator workflow you want to tighten.</span>
+      </div>
+    </div>
+    <div class="hero-hamper" aria-hidden="true">
+      <div class="hamper-weave"></div>
+    </div>
+  </section>
+
+  <section class="signals">
+    <div class="wrap signals-grid">
+      <div class="signal">
+        <div class="signal-num">60+</div>
+        <div class="signal-label">Partner laundromats, each with its own SOPs</div>
+      </div>
+      <div class="signal">
+        <div class="signal-num">12</div>
+        <div class="signal-label">States live, with a hospitality pivot underway</div>
+      </div>
+      <div class="signal">
+        <div class="signal-num">$250K</div>
+        <div class="signal-label">Morgan Stanley ISV check, first Miami venture selected</div>
+      </div>
+      <div class="signal">
+        <div class="signal-num">1</div>
+        <div class="signal-label">Layer above the app where a lot of the pain lives</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="thesis">
+    <div class="wrap">
+      <h2 class="section-title">The 60 / 30 / 10 on an on-demand laundry network</h2>
+      <p class="section-kicker">We work one layer above the app. Most problems inside a multi-unit operator are not AI problems.</p>
+      <div class="split-cards">
+        <article class="split-card split-60">
+          <div class="split-pct">60%</div>
+          <h3>Standard code and data work</h3>
+          <p>Ticketing, labeling, dispatch. The Postgres layer. Cheapest to build, cheapest to run, hardest to get wrong once.</p>
+        </article>
+        <article class="split-card split-30">
+          <div class="split-pct">30%</div>
+          <h3>Rule-based logic</h3>
+          <p>"If the bag is flagged delicate and the partner is Shop B, route differently." Declarative rules you can read without a PhD.</p>
+        </article>
+        <article class="split-card split-10">
+          <div class="split-pct">10%</div>
+          <h3>Real AI questions</h3>
+          <p>Classifying fuzzy support tickets. Flagging anomalous orders. Predicting which partner is about to have a bad week.</p>
+        </article>
+      </div>
+      <p class="section-foot">We help operators decide which layer each problem belongs on before anyone writes code. Software gets cheaper. Wrong scope gets expensive.</p>
+    </div>
+  </section>
+
+  <section class="hypothesis">
+    <div class="wrap">
+      <h2 class="section-title">Three bets we would test with you in thirty minutes</h2>
+      <ol class="bets">
+        <li>
+          <span class="bet-tag">Bet 01</span>
+          <h3>Partner quality variance is the ceiling on growth.</h3>
+          <p>Sixty partner shops, each with their own SOPs, means every new hotel or STR contract inherits whichever operator runs the route that week. A CEO at Hamperapp would confirm in thirty seconds that the biggest open issue in ops reviews is "partner X had a bad week."</p>
+        </li>
+        <li>
+          <span class="bet-tag">Bet 02</span>
+          <h3>Customer-service triage is a human bottleneck.</h3>
+          <p>Review patterns show miscommunication, then a supervisor making it right, over and over. There is no structured playbook for the top three failure modes (lost item, wrong label, fee dispute). A routing layer that closes the first seventy percent of tickets on a standard resolution reclaims a meaningful fraction of the support team's week.</p>
+        </li>
+        <li>
+          <span class="bet-tag">Bet 03</span>
+          <h3>The hospitality pivot needs a productized operator onboarding flow.</h3>
+          <p>Hotels and STR operators buy on SLAs. The current partner network was built for consumer pickup. Onboarding a new commercial partner into a repeatable service tier is the wedge that turns Hamperapp from a consumer marketplace into a B2B platform.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="proof">
+    <div class="wrap">
+      <h2 class="section-title">Closest work we have done looks like this</h2>
+      <div class="proof-card">
+        <div class="proof-meta">
+          <span class="proof-pill">Case study</span>
+          <span class="proof-label">Simple Lyfe Stays, 46-property short-term rental operator, Florida</span>
+        </div>
+        <p class="proof-body">Ops-heavy multi-unit operator, founder-led. We mapped their operational context into a shared architecture the owner, the cleaners, and the software all read from, then wired the rule-based pieces into the tool stack they already owned. Scoped sprint, two tiers. The playbook survives staff turnover.</p>
+        <p class="proof-method">
+          The methodology is published: Interpretable Context Methodology, submitted to ACM TiiS.
+          <a class="inline-link" href="https://github.com/RinDig/Interpretable-Context-Methodology-ICM-" target="_blank" rel="noopener">GitHub repository</a>.
+        </p>
+      </div>
+      <p class="proof-aside">Eduba partners with <a class="inline-link" href="https://nlplogix.com" target="_blank" rel="noopener">NLP Logix</a> for work that sits below the orchestration layer. NLP Logix has been in machine learning since 2011 and runs over 150 data scientists.</p>
+    </div>
+  </section>
+
+  <section class="discovery">
+    <div class="wrap">
+      <h2 class="section-title">What the thirty minutes looks like</h2>
+      <p class="section-kicker">Five questions. Your answers tell us whether there is a real engagement or whether we should shake hands and move on.</p>
+      <ul class="questions">
+        <li><span>01.</span> When a bag comes back under the wrong name or short an item, who owns the ticket from open to close, and how many hands does it pass through?</li>
+        <li><span>02.</span> Across your 60 partner laundromats, how much of the service standard lives in a document versus in someone's head at each shop?</li>
+        <li><span>03.</span> On the hospitality side, what does a typical new hotel or STR onboarding look like right now, and where does it stall?</li>
+        <li><span>04.</span> When a partner has a bad week, what is the first signal you see, and how long after the customer feels it?</li>
+        <li><span>05.</span> If you could point a small engagement at one operator workflow this quarter, which one would pay back fastest?</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta" id="cta">
+    <div class="wrap cta-inner">
+      <div class="cta-copy">
+        <h2>Thirty minutes with Matt.</h2>
+        <p>Matt Creamer runs revenue for Eduba and has spent the last year on founder-led operators in hospitality and multi-unit services. He will be at booth SS87 for the conference. The ask is a half hour. Bring one operator workflow you hate. We will do a live orchestration read on it.</p>
+      </div>
+      <div class="cta-action">
+        <a class="btn btn-primary btn-lg" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">Book the call</a>
+        <span class="cta-sub">calendly.com/thecro-eduba/30min</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span class="footer-prepared">Prepared by Eduba, <a class="inline-link" href="https://eduba.io" target="_blank" rel="noopener">eduba.io</a>.</span>
+    <span class="footer-for">A one-page read for the Hamperapp founders.</span>
+  </div>
+</footer>
+
+</body>
+</html>
